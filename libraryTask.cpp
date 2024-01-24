@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <string>
 #include <vector>
 #include <memory>
@@ -36,9 +36,9 @@ public:
     }
 
     void displayBooks() const {
-        std::cout << "Áèáëèîòåêà ñîäåðæèò ñëåäóþùèå êíèãè:" << std::endl;
+        std::cout << "Ð‘Ð¸Ð±Ð»Ð¸Ð¾Ñ‚ÐµÐºÐ° ÑÐ¾Ð´ÐµÑ€Ð¶Ð¸Ñ‚ ÑÐ»ÐµÐ´ÑƒÑŽÑ‰Ð¸Ðµ ÐºÐ½Ð¸Ð³Ð¸:" << std::endl;
         for (const auto& book : books_) {
-            std::cout << "Íàçâàíèå: " << book->getTitle() << ", Àâòîð: " << book->getAuthor() << std::endl;
+            std::cout << "ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ: " << book->getTitle() << ", ÐÐ²Ñ‚Ð¾Ñ€: " << book->getAuthor() << std::endl;
         }
     }
 
@@ -52,15 +52,15 @@ int main() {
     Library library;
 
     library.addBook("1984", "George Orwell");
-    library.addBook("Âîéíà è ìèð", "Ëåâ Òîëñòîé");
+    library.addBook("Ð’Ð¾Ð¹Ð½Ð° Ð¸ Ð¼Ð¸Ñ€", "Ð›ÐµÐ² Ð¢Ð¾Ð»ÑÑ‚Ð¾Ð¹");
 
     library.displayBooks();
 
     try {
-        library.removeBook("Ãàððè Ïîòòåð");
+        library.removeBook("Ð“Ð°Ñ€Ñ€Ð¸ ÐŸÐ¾Ñ‚Ñ‚ÐµÑ€");
     }
     catch (const std::runtime_error& e) {
-        std::cerr << "Îøèáêà: " << e.what() << std::endl;
+        std::cerr << "ÐžÑˆÐ¸Ð±ÐºÐ°: " << e.what() << std::endl;
     }
 
     return 0;
